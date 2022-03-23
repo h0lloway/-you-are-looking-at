@@ -31,3 +31,12 @@ $('a[href*="#"]').on('click', function () {
   }, 600);
   return false;
 });
+
+// BURGER
+
+$(document).ready(function () {
+  $('.nav__burger').click(function (event) {
+    $('.nav__burger,.nav__list').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+});
