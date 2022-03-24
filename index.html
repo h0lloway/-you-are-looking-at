@@ -21,6 +21,10 @@
   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
   <!-- choices -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" /> -->
+
+  <!-- tooltips -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+
   <!-- my-styles -->
   <link rel="stylesheet" href="css/main.min.css">
 
@@ -36,7 +40,12 @@
   <!-- swiper -->
   <!-- <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- tooltips -->
+  <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+  <!-- jQuery -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <!-- my JS -->
   <script defer src="js/main.js"></script>
 </head>
@@ -49,24 +58,40 @@
           <span>Dubrovin</span>
           <span>Maksim</span>
         </a>
-        <div class="header__nav nav">
-          <button class="nav__burger my-btn" aria-label="Открытие меню">
-            <span></span>
+        <div class="header__right-content">
+          <div class="header__nav nav">
+            <button class="nav__burger my-btn" aria-label="Открытие меню">
+              <span></span>
+            </button>
+            <ul class="nav__list list-reset">
+              <li class="nav__list-item">
+                <a class="nav__list-item-link" href="#skills">Мои навыки</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-item-link" href="#about">Обо мне</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-item-link" href="#portfolio">Мои работы</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-item-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="header__btn my-btn swich-theme-btn swich-theme-btn-light js-tooltip"
+            data-tippy-content="Когда-нибудь будет меняться тема, но не сегодня :(" aria-label="Пометка">
+            <svg class="sun-light">
+              <use xlink:href="img/sprite.svg#sun-light"></use>
+            </svg>
           </button>
-          <ul class="nav__list list-reset">
-            <li class="nav__list-item">
-              <a class="nav__list-item-link" href="#skills">Мои навыки</a>
-            </li>
-            <li class="nav__list-item">
-              <a class="nav__list-item-link" href="#about">Обо мне</a>
-            </li>
-            <li class="nav__list-item">
-              <a class="nav__list-item-link" href="#portfolio">Мои работы</a>
-            </li>
-            <li class="nav__list-item">
-              <a class="nav__list-item-link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
+
+          <button class="header__btn my-btn swich-theme-btn swich-theme-btn-dark" style="display: none;">
+            <svg class="moon-dark">
+              <use xlink:href="img/sprite.svg#moon-dark"></use>
+            </svg>
+          </button>
+
         </div>
       </div>
     </div>
@@ -453,7 +478,7 @@
             </div>
           </li>
 
-          
+
           <li class="portfolio__list-item item-portf">
             <div class="item-portf__body">
               <div class="item-portf__img">
@@ -519,6 +544,9 @@
             </div>
           </li>
 
+          <nav class="nav">
+            sasa
+          </nav>
 
         </ul>
       </div>

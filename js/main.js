@@ -40,3 +40,43 @@ $(document).ready(function () {
     $('body').toggleClass('lock');
   });
 });
+
+// SWICH THEME
+
+
+// let lightTheme = document.querySelector(".swich-theme-btn-light");
+// let darkTheme = document.querySelector(".swich-theme-btn-dark");
+
+
+// lightTheme.addEventListener("click", function () {
+//   this.style.display = "none";
+//   darkTheme.style.display = "block";
+
+
+//   darkTheme.addEventListener("click", function () {
+//     this.style.display = "none";
+//     lightTheme.style.display = "block";
+//   });
+// });
+
+// TOOLTIPS
+
+tippy('.js-tooltip', {
+  theme: 'projects-tooltip',
+
+  animation: 'fade',
+  // followCursor: true,
+  delay: 300,
+
+  placement: "top",
+  allowHTML: !0,
+  role: "tooltip",
+  trigger: "mouseenter focus click",
+  hideOnClick: !0,
+
+  // trigger: 'click',
+  // trigger: 'focus',
+  maxWidth: 250
+});
+
+
