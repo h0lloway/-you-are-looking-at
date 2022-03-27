@@ -63,20 +63,33 @@ $(document).ready(function () {
 
 tippy('.js-tooltip', {
   theme: 'projects-tooltip',
-
   animation: 'fade',
-  // followCursor: true,
   delay: 300,
-
   placement: "top",
   allowHTML: !0,
   role: "tooltip",
   trigger: "mouseenter focus click",
   hideOnClick: !0,
-
-  // trigger: 'click',
-  // trigger: 'focus',
   maxWidth: 250
 });
 
 
+
+
+// РАСКРЫТЬ КАРТОЧКИ
+
+let hifgRatingItems = gsap.timeline({ paused: true })
+
+hifgRatingItems
+  .to(".hidden", { duration: .2, opacity: 1, visibility: "visible", display: "inline-flex" })
+
+document.querySelector(".more-item-btn").addEventListener("click", function () {
+  document.querySelector(".close-item-btn").classList.add("visible")
+  document.querySelector(".more-item-btn").classList.add("hidden")
+  hifgRatingItems.timeScale(1).play()
+})
+document.querySelector(".close-item-btn").addEventListener("click", function () {
+  document.querySelector(".close-item-btn").classList.remove("visible")
+  document.querySelector(".more-item-btn").classList.remove("hidden")
+  hifgRatingItems.timeScale(2).reverse()
+})

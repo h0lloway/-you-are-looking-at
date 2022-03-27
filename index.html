@@ -40,6 +40,9 @@
   <!-- swiper -->
   <!-- <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
 
+  <!-- GSAP -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
   <!-- tooltips -->
   <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
@@ -501,7 +504,7 @@
           </li>
 
 
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf hidden">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/htmlletter.webp" alt="Скриншот работы">
@@ -523,7 +526,7 @@
           </li>
 
 
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf hidden">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/blanchard-letter.webp" alt="Скриншот работы">
@@ -544,7 +547,55 @@
             </div>
           </li>
 
+
+          <li class="portfolio__list-item item-portf hidden">
+            <div class="item-portf__body">
+              <div class="item-portf__img">
+                <img src="img/Игра пары числе.webp" alt="Скриншот работы">
+              </div>
+              <div class="item-portf__content">
+                <h3 class="item-portf__title">
+                  Игра
+                  <br><span>Пары чисел</span>
+                </h3>
+                <ul class="item-portf__list list-reset">
+                  <li class="item-portf__list-item">Работа: JavaScript</li>
+                  <li class="item-portf__list-item"></li>
+                  <li class="item-portf__list-item">Функционал: Игра</li>
+                </ul>
+                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/js-game-couples/"
+                  target="_blank">Смотреть</a>
+              </div>
+            </div>
+          </li>
+
+
+          <!-- <li class="portfolio__list-item item-portf hidden">
+            <div class="item-portf__body">
+              <div class="item-portf__img">
+                <img src="img/blanchard-letter.webp" alt="Скриншот работы">
+              </div>
+              <div class="item-portf__content">
+                <h3 class="item-portf__title">
+                  HTML письмо
+                  <br><span>Blanchard</span>
+                </h3>
+                <ul class="item-portf__list list-reset">
+                  <li class="item-portf__list-item">Работа: Верстка</li>
+                  <li class="item-portf__list-item">Адаптивно</li>
+                  <li class="item-portf__list-item">Функционал: Рассылка</li>
+                </ul>
+                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/blanchard-letter/"
+                  target="_blank">Смотреть</a>
+              </div>
+            </div>
+          </li> -->
+
+
         </ul>
+
+        <button class="portfolio__btn my-btn red-btn more-item-btn">Показать ещё</button>
+        <button class="portfolio__btn my-btn red-btn close-item-btn hidden">Скрыть</button>
       </div>
     </section>
 
