@@ -44,8 +44,8 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
   <!-- tooltips -->
-  <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-  <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <!-- <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script> -->
+  <!-- <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script> -->
 
   <!-- jQuery -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -82,18 +82,12 @@
             </ul>
           </div>
 
-          <button class="header__btn my-btn swich-theme-btn swich-theme-btn-light js-tooltip"
-            data-tippy-content="Когда-нибудь будет меняться тема, но не сегодня :(" aria-label="Пометка">
-            <svg class="sun-light">
-              <use xlink:href="img/sprite.svg#sun-light"></use>
-            </svg>
-          </button>
-
-          <button class="header__btn my-btn swich-theme-btn swich-theme-btn-dark" style="display: none;">
-            <svg class="moon-dark">
-              <use xlink:href="img/sprite.svg#moon-dark"></use>
-            </svg>
-          </button>
+          <div class="header__theme">
+            <button class="header__btn my-btn swich-theme-btn swich-theme-btn-dark" id="theme-btn" aria-label="Пометка">
+              <img src="img/moon.png" alt="" width="30" height="30" id="theme-img">
+            </button>
+            <!-- data-tippy-content="Не финальный вариант темной темы, она в процессе :)" js-tooltip -->
+          </div>
 
         </div>
       </div>
@@ -133,11 +127,12 @@
           Мои навыки
         </h2>
         <ul class="skills__list list-reset skill">
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/html5.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#html"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">HTML5</div>
             <div class="skill__descr">Семантическая
@@ -145,71 +140,79 @@
               <br> Использование БЭМ
             </div>
           </li>
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/css3.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#css"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">CSS3</div>
             <div class="skill__descr">Стилизация элементов на
               <br> странице
             </div>
           </li>
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/JS.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#javascript"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">JavaScript</div>
             <div class="skill__descr">Подключение скриптов для динамичности страницы</div>
           </li>
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/Bootstrap.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#bootstrap"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">Bootstrap</div>
             <div class="skill__descr">Использование сетки и быстрая адаптация сайта</div>
           </li>
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/jquery.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#jquery"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">jQuery</div>
             <div class="skill__descr">Подключение анимации на странице</div>
           </li>
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/sass.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#sass"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">Sass</div>
             <div class="skill__descr">Быстрое написание стилей </div>
           </li>
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/gulp.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#gulp"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">Gulp</div>
             <div class="skill__descr">Быстрая компиляция файлов </div>
           </li>
+
           <li class="skill__item">
             <div class="skill__img">
-              <picture>
-                <img src="img/figma.webp" alt="Лого инструмента">
-              </picture>
+              <svg class="web-logo" width="50" height="50">
+                <use xlink:href="img/sprite.svg#figma"></use>
+              </svg>
             </div>
             <div class="skill__subtitle">Figma</div>
             <div class="skill__descr">Верстка по макету</div>
           </li>
+
         </ul>
       </div>
     </section>
@@ -225,9 +228,9 @@
             <li class="qualities__item">
               <div class="qualities__wrap">
                 <div class="qualities__img">
-                  <picture>
-                    <img src="img/time.webp" alt="Лого качеств">
-                  </picture>
+                  <svg class="qualities__logo" width="72" height="72">
+                    <use xlink:href="img/sprite.svg#clock"></use>
+                  </svg>
                 </div>
                 <div class="qualities__subtitle">Ответственный</div>
                 <div class="qualities__descr">Всегда ответственно подхожу к выполнению любой работы</div>
@@ -238,9 +241,9 @@
             <li class="qualities__item">
               <div class="qualities__wrap">
                 <div class="qualities__img">
-                  <picture>
-                    <img src="img/mobilephone.webp" alt="Лого качеств">
-                  </picture>
+                  <svg class="qualities__logo" width="72" height="72">
+                    <use xlink:href="img/sprite.svg#iphone"></use>
+                  </svg>
                 </div>
                 <div class="qualities__subtitle">Всегда на связи</div>
                 <div class="qualities__descr">
@@ -255,9 +258,9 @@
             <li class="qualities__item">
               <div class="qualities__wrap">
                 <div class="qualities__img">
-                  <picture>
-                    <img src="img/notepad.webp" alt="Лого качеств">
-                  </picture>
+                  <svg class="qualities__logo" width="72" height="72">
+                    <use xlink:href="img/sprite.svg#notebook"></use>
+                  </svg>
                 </div>
                 <div class="qualities__subtitle">Быстро обучаюсь</div>
                 <div class="qualities__descr">

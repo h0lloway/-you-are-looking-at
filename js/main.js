@@ -59,6 +59,32 @@ $(document).ready(function () {
 //   });
 // });
 
+
+const toggleThemeBtn = document.getElementById('theme-btn');
+const toggleThemeImg = document.getElementById('theme-img');
+
+
+function setDarkTheme() {
+  document.body.classList.add('dark')
+  toggleThemeImg.src = 'img/sun.png'
+  localStorage.theme = 'dark'
+}
+
+function setLightTheme() {
+  document.body.classList.remove('dark')
+  toggleThemeImg.src = 'img/moon.png'
+  localStorage.theme = 'light'
+}
+
+toggleThemeBtn.addEventListener('click', () => {
+
+  if (document.body.classList.contains('dark')) setLightTheme()
+  else setDarkTheme()
+})
+
+if (localStorage.theme === 'dark') setDarkTheme()
+
+
 // TOOLTIPS
 
 tippy('.js-tooltip', {
