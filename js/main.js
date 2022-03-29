@@ -87,24 +87,24 @@ if (localStorage.theme === 'dark') setDarkTheme()
 
 // TOOLTIPS
 
-tippy('.js-tooltip', {
-  theme: 'projects-tooltip',
-  animation: 'fade',
-  delay: 300,
-  placement: "top",
-  allowHTML: !0,
-  role: "tooltip",
-  trigger: "mouseenter focus click",
-  hideOnClick: !0,
-  maxWidth: 250
-});
+// tippy('.js-tooltip', {
+//   theme: 'projects-tooltip',
+//   animation: 'fade',
+//   delay: 300,
+//   placement: "top",
+//   allowHTML: !0,
+//   role: "tooltip",
+//   trigger: "mouseenter focus click",
+//   hideOnClick: !0,
+//   maxWidth: 250
+// });
 
 
 
 
 // РАСКРЫТЬ КАРТОЧКИ
 
-let hifgRatingItems = gsap.timeline({ paused: true })
+const hifgRatingItems = gsap.timeline({ paused: true })
 
 hifgRatingItems
   .to(".hidden", { duration: .2, opacity: 1, visibility: "visible", display: "inline-flex" })
