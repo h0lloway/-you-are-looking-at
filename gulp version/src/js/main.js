@@ -85,37 +85,55 @@ toggleThemeBtn.addEventListener('click', () => {
 if (localStorage.theme === 'dark') setDarkTheme()
 
 
-// TOOLTIPS
-
-// tippy('.js-tooltip', {
-//   theme: 'projects-tooltip',
-//   animation: 'fade',
-//   delay: 300,
-//   placement: "top",
-//   allowHTML: !0,
-//   role: "tooltip",
-//   trigger: "mouseenter focus click",
-//   hideOnClick: !0,
-//   maxWidth: 250
-// });
-
-
-
-
 // РАСКРЫТЬ КАРТОЧКИ
 
-const hifgRatingItems = gsap.timeline({ paused: true })
+// const hifgRatingItems = gsap.timeline({ paused: true })
 
-hifgRatingItems
-  .to(".hidden", { duration: .2, opacity: 1, visibility: "visible", display: "inline-flex" })
+// hifgRatingItems
+// 	.to(".hidden", { duration: .2, opacity: 1, visibility: "visible", display: "inline-flex" })
 
-document.querySelector(".more-item-btn").addEventListener("click", function () {
-  document.querySelector(".close-item-btn").classList.add("visible")
-  document.querySelector(".more-item-btn").classList.add("hidden")
-  hifgRatingItems.timeScale(1).play()
-})
-document.querySelector(".close-item-btn").addEventListener("click", function () {
-  document.querySelector(".close-item-btn").classList.remove("visible")
-  document.querySelector(".more-item-btn").classList.remove("hidden")
-  hifgRatingItems.timeScale(2).reverse()
-})
+// document.querySelector(".more-item-btn").addEventListener("click", function () {
+// 	document.querySelector(".close-item-btn").classList.add("visible")
+// 	document.querySelector(".more-item-btn").classList.add("hidden")
+// 	hifgRatingItems.timeScale(1).play()
+// })
+// document.querySelector(".close-item-btn").addEventListener("click", function () {
+// 	document.querySelector(".close-item-btn").classList.remove("visible")
+// 	document.querySelector(".more-item-btn").classList.remove("hidden")
+// 	hifgRatingItems.timeScale(2).reverse()
+// })
+
+
+const showMore = document.querySelector('.more-item-btn');
+const productsLength = document.querySelectorAll('.item-portf').length;
+let items = 6;
+
+showMore.addEventListener('click', () => {
+  items += 3
+  const array = Array.from(document.querySelector('.portfolio__list').children);
+  const visItems = array.slice(0, items);
+
+  visItems.forEach(el => el.classList.add('is-visible'));
+
+
+  if (visItems.length === productsLength) {
+    showMore.style.display = 'none';
+  }
+});
+
+
+
+jQuery(document).ready(function () {
+  var btn = $('#up-arrow');
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+  btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+});

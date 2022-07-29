@@ -54,7 +54,7 @@
       left: -25px;
       height: 100px;
       width: 100px;
-      box-shadow: 3px 3px #ff6464;
+      box-shadow: 3px 3px var(--red-main);
       border-radius: 50%;
       transition: all .3s ease 0s;
     }
@@ -68,7 +68,7 @@
     // }
 
     &__img:hover:before {
-      box-shadow: 4px 4px 2px 2px #ff7373, 6px 6px 3px 3px #fd9e9e;
+      box-shadow: 4px 4px 2px 2px var(--red-main), 6px 6px 3px 3px rgb(237, 117, 117);
     }
 
     &__img img {

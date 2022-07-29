@@ -111,6 +111,14 @@
     }
   }
 
+  .item-portf:nth-child(n + 7) {
+    display: none;
+  }
+
+  .item-portf.is-visible {
+    display: block;
+  }
+
   &__btn {
     position: relative;
     left: 50%;

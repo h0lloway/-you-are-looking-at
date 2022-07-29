@@ -52,6 +52,8 @@ html {
   --orange-color: #FF862F;
   --light-orange: #b89c72;
   --dark-orange: #BB370E;
+
+  --red-main: #ce4541;
 }
 
 *,
@@ -340,11 +342,45 @@ body.dark {
 // @media (max-width: 900px) {
 //   .container {
 //     max-width: 940px;
-//     margin: 0 auto;
+//     margin: 0 auto;  
 //     padding-right: 20px;
 //     padding-left: 20px;
 //   }
 // }
+
+
+// scroll bar // scroll bar // scroll bar // scroll bar // scroll bar // scroll bar
+
+::-webkit-scrollbar {
+  /* 1 - скроллбар */
+  width: 10px;
+  height: 5px;
+  background-color: var(--almost-white);
+}
+
+// ::-webkit-scrollbar-button { /* 2 - кнопка */}
+
+// ::-webkit-scrollbar-track { /* 3 - трек */
+
+//   color: red;
+// }
+
+// ::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
+
+//   color: red;
+// }
+
+::-webkit-scrollbar-thumb {
+  /* 5 - ползунок */
+  // border-radius: 6px;
+  background: linear-gradient(#ffffff, rgb(0, 0, 0));
+}
+
+// ::-webkit-scrollbar-corner { /* 6 - уголок */}
+
+// ::-webkit-resizer { /* 7 - изменение размеров */}
+
+
 
 @media (max-width: 1012px) {
   .container {
@@ -366,4 +402,46 @@ body.dark {
     padding: 0 10px;
   }
 
+}
+
+
+.up-arrow {
+  display: inline-block;
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s;
+  z-index: 1000;
+}
+
+.up-arrow:hover {
+  cursor: pointer;
+  // background-color: rgb(38, 36, 36); 
+}
+
+.up-arrow:active {
+  // background-color: #555; 
+}
+
+.up-arrow {
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.up-arrow.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.up-arrow svg {
+  fill: var(--carbonic);
 }
