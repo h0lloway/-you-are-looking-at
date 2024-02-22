@@ -182,6 +182,7 @@ let message;
 if (hours < 12) message = 'Доброе утро!'
 else message = 'Добрый день!'
 
-if (hours > 16) message = 'Добрый вечер!'
+if (hours > 16  && hours < 22) message = 'Добрый вечер!'
+else message = 'Доброй ночи!'
 
 hi.innerText = message;
