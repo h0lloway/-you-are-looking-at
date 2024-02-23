@@ -81,12 +81,20 @@
               <li class="nav__list-item">
                 <a class="nav__list-item-link" href="#contacts">Контакты</a>
               </li>
+              <li class="nav__list-item">
+                <a class="nav__list-item-link cv-link" href="assets/resume.pdf" download="resume.pdf">
+                  <span>CV</span>
+                  <svg class="" width="18" height="18">
+                    <use xlink:href="img/sprite.svg#download"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
 
           <div class="header__theme">
             <button class="header__btn my-btn swich-theme-btn swich-theme-btn-dark" id="theme-btn" aria-label="Пометка">
-              <img src="img/moon.png" alt="" width="30" height="30" id="theme-img">
+              <img src="img/sun.png" alt="" width="30" height="30" id="theme-img">
             </button>
             <!-- data-tippy-content="Не финальный вариант темной темы, она в процессе :)" js-tooltip -->
           </div>
@@ -133,7 +141,18 @@
             <br> валидно и адаптивно
           </p> -->
 
-          <a class="hero-title__sixth red-btn" href="#portfolio">Смотреть портфолио</a>
+          <a class="hero-title__sixth red-btn portf-btn" href="#portfolio"><span>Смотреть портфолио</span>
+            <svg class="" focusable="false" viewbox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M13 14v6c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1zm-9 7h6c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1zM3 4v6c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1zm12.95-1.6L11.7 6.64c-.39.39-.39 1.02 0 1.41l4.25 4.25c.39.39 1.02.39 1.41 0l4.25-4.25c.39-.39.39-1.02 0-1.41L17.37 2.4c-.39-.39-1.03-.39-1.42 0z">
+              </path>
+            </svg>
+          </a>
+
+          <!-- <a href="##" class="hero-title__seventh red-btn cv-btn">
+            <span>Скачать CV</span>
+
+          </a> -->
 
           <!-- <a class="button learn-more "  href="#portfolio"><span>Смотреть портфолио</span></a> -->
         </div>
@@ -429,6 +448,52 @@
             </div>
           </li>
 
+          <!-- 6 -->
+          <li class="portfolio__list-item item-portf">
+            <div class="item-portf__body">
+              <div class="item-portf__img">
+                <img src="img/SDP.webp" alt="Скриншот работы">
+              </div>
+              <div class="item-portf__content">
+                <h3 class="item-portf__title">
+                  Сайт магазина мебели
+                  <br><span>SitDownPls</span>
+                </h3>
+                <ul class="item-portf__list list-reset">
+                  <li class="item-portf__list-item">Работа: Верстка</li>
+                  <li class="item-portf__list-item">HTML + CSS(flex + grid)</li>
+                  <li class="item-portf__list-item">Функционал: Слайдер, табы, модальные окна, селекты</li>
+                </ul>
+                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/SitDownPls__makdu/" target="_blank">
+                  На сайт
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <!-- 8 -->
+          <li class="portfolio__list-item item-portf">
+            <div class="item-portf__body">
+              <div class="item-portf__img">
+                <img src="img/blanchard.webp" alt="Скриншот работы">
+              </div>
+              <div class="item-portf__content">
+                <h3 class="item-portf__title">
+                  Страница галереи
+                  <br><span>Blanchard - галерея</span>
+                </h3>
+                <ul class="item-portf__list list-reset">
+                  <li class="item-portf__list-item">Работа: Адаптивная верстка</li>
+                  <li class="item-portf__list-item">HTML + CSS(flex)</li>
+                  <li class="item-portf__list-item">Функционал: Слайдер, табы, модальные окна, аккордион</li>
+                </ul>
+                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/diplom_blanchard/" target="_blank">
+                  На сайт
+                </a>
+              </div>
+            </div>
+          </li>
+
           <li class="portfolio__list-item item-portf">
             <div class="item-portf__body">
               <div class="item-portf__img">
@@ -493,28 +558,7 @@
             </div>
           </li>
 
-          <!-- 6 -->
-          <li class="portfolio__list-item item-portf">
-            <div class="item-portf__body">
-              <div class="item-portf__img">
-                <img src="img/SDP.webp" alt="Скриншот работы">
-              </div>
-              <div class="item-portf__content">
-                <h3 class="item-portf__title">
-                  Сайт магазина мебели
-                  <br><span>SitDownPls</span>
-                </h3>
-                <ul class="item-portf__list list-reset">
-                  <li class="item-portf__list-item">Работа: Верстка</li>
-                  <li class="item-portf__list-item">HTML + CSS(flex + grid)</li>
-                  <li class="item-portf__list-item">Функционал: Слайдер, табы, модальные окна, селекты</li>
-                </ul>
-                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/SitDownPls__makdu/" target="_blank">
-                  На сайт
-                </a>
-              </div>
-            </div>
-          </li>
+
 
           <li class="portfolio__list-item item-portf">
             <div class="item-portf__body">
@@ -647,28 +691,7 @@
             </div>
           </li> -->
 
-          <!-- 8 -->
-          <li class="portfolio__list-item item-portf">
-            <div class="item-portf__body">
-              <div class="item-portf__img">
-                <img src="img/blanchard.webp" alt="Скриншот работы">
-              </div>
-              <div class="item-portf__content">
-                <h3 class="item-portf__title">
-                  Страница галереи
-                  <br><span>Blanchard - галерея</span>
-                </h3>
-                <ul class="item-portf__list list-reset">
-                  <li class="item-portf__list-item">Работа: Адаптивная верстка</li>
-                  <li class="item-portf__list-item">HTML + CSS(flex)</li>
-                  <li class="item-portf__list-item">Функционал: Слайдер, табы, модальные окна, аккордион</li>
-                </ul>
-                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/diplom_blanchard/" target="_blank">
-                  На сайт
-                </a>
-              </div>
-            </div>
-          </li>
+
 
           <!-- 9 -->
           <li class="portfolio__list-item item-portf">
@@ -914,6 +937,7 @@
 
   </main>
 
+
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__content">
@@ -933,7 +957,7 @@
 
         <p class="footer__text">
           <img src="img/memoji-.png" alt="" width="50">
-          ©2024, Created by <a class="footer__link" href="https://github.com/h0lloway">me</a> with love
+          ©2024, Created by <a class="footer__link" href="https://github.com/h0lloway" target="_blank">me</a> with love
         </p>
       </div>
 

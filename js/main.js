@@ -18,19 +18,10 @@ window.addEventListener('scroll', () => {
     // scroll up
     header.classList.remove('hide');
   }
-
-
   lastScroll = scrollPosition();
 });
 
 // ПЛАВНЫЕ ЯКОРЯ
-
-// $('a[href*="#"]').on('click', function () {
-//   $('html, body').animate({
-//     scrollTop: $($.attr(this, 'href')).offset().top
-//   }, 600);
-//   return false;
-// });
 
 // собираем все якоря; устанавливаем время анимации и количество кадров
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
@@ -77,36 +68,19 @@ $(document).ready(function () {
 
 // SWICH THEME
 
-
-// let lightTheme = document.querySelector(".swich-theme-btn-light");
-// let darkTheme = document.querySelector(".swich-theme-btn-dark");
-
-
-// lightTheme.addEventListener("click", function () {
-//   this.style.display = "none";
-//   darkTheme.style.display = "block";
-
-
-//   darkTheme.addEventListener("click", function () {
-//     this.style.display = "none";
-//     lightTheme.style.display = "block";
-//   });
-// });
-
-
 const toggleThemeBtn = document.getElementById('theme-btn');
 const toggleThemeImg = document.getElementById('theme-img');
 
 
 function setDarkTheme() {
   document.body.classList.add('dark')
-  toggleThemeImg.src = 'img/sun.png'
+  toggleThemeImg.src = 'img/moon.png'
   localStorage.theme = 'dark'
 }
 
 function setLightTheme() {
   document.body.classList.remove('dark')
-  toggleThemeImg.src = 'img/moon.png'
+  toggleThemeImg.src = 'img/sun.png'
   localStorage.theme = 'light'
 }
 
@@ -119,24 +93,8 @@ toggleThemeBtn.addEventListener('click', () => {
 if (localStorage.theme === 'dark') setDarkTheme()
 
 
-// РАСКРЫТЬ КАРТОЧКИ
 
-// const hifgRatingItems = gsap.timeline({ paused: true })
-
-// hifgRatingItems
-// 	.to(".hidden", { duration: .2, opacity: 1, visibility: "visible", display: "inline-flex" })
-
-// document.querySelector(".more-item-btn").addEventListener("click", function () {
-// 	document.querySelector(".close-item-btn").classList.add("visible")
-// 	document.querySelector(".more-item-btn").classList.add("hidden")
-// 	hifgRatingItems.timeScale(1).play()
-// })
-// document.querySelector(".close-item-btn").addEventListener("click", function () {
-// 	document.querySelector(".close-item-btn").classList.remove("visible")
-// 	document.querySelector(".more-item-btn").classList.remove("hidden")
-// 	hifgRatingItems.timeScale(2).reverse()
-// })
-
+// работы в портфолио
 
 const showMore = document.querySelector('.more-item-btn');
 const productsLength = document.querySelectorAll('.item-portf').length;
@@ -172,16 +130,15 @@ jQuery(document).ready(function () {
   });
 });
 
-
-
 // Приветствие по времени
 
 const hours = new Date().getHours();
 let message;
 
-if (hours < 12) message = 'Доброе утро!'
-else message = 'Добрый день!'
+if (hours > 16 && hours < 22) message = 'Добрый вечер!'
+else message = 'Доброй ночи!'
 
-if (hours > 16) message = 'Добрый вечер!'
+if (hours > 6 && hours < 12) message = 'Доброе утро!'
+else message = 'Добрый день!'
 
 hi.innerText = message;
