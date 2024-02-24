@@ -135,10 +135,9 @@ jQuery(document).ready(function () {
 const hours = new Date().getHours();
 let message;
 
-if (hours > 16 && hours < 22) message = 'Добрый вечер!'
-else message = 'Доброй ночи!'
-
-if (hours > 6 && hours < 12) message = 'Доброе утро!'
-else message = 'Добрый день!'
+if (hours >= 0 && hours < 6) message = 'Доброй ночи!'
+if (hours >= 6 && hours < 12) message = 'Доброе утро!'
+if (hours >= 12 && hours < 18) message = 'Добрый день!'
+if (hours >= 18 && hours < 0) message = 'Добрый вечер!'
 
 hi.innerText = message;
