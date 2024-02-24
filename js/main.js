@@ -138,12 +138,23 @@ jQuery(document).ready(function () {
 
 // Приветствие по времени
 
-const hours = new Date().getHours();
-let message;
+const time = new Date().getHours();
+let greet;
 
-if (hours >= 0 && hours < 6) message = 'Доброй ночи!'
-if (hours >= 6 && hours < 12) message = 'Доброе утро!'
-if (hours >= 12 && hours < 18) message = 'Добрый день!'
-if (hours >= 18 && hours < 0) message = 'Добрый вечер!'
+if (time >= 0 && time < 6) {
+  greet = 'Доброй ночи!';
+}
 
-hi.innerText = message;
+else if (time >= 6 && time < 12) {
+  greet = 'Доброе утро!';
+}
+
+else if (time >= 12 && time < 17) {
+  greet = 'Добрый день!';
+}
+
+else if (time >= 17 && time <= 23) {
+  greet = 'Добрый вечер!';
+}
+
+hi.innerText = greet;
