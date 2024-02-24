@@ -65,7 +65,13 @@ $(document).ready(function () {
     $('body').toggleClass('lock');
   });
 });
-
+document.addEventListener("click", function (e) {
+  let r = e.target
+    , i = document.querySelector(".nav__burger");
+  r.closest(".nav__burger") || (i.classList.remove("active"),
+    document.querySelector(".nav__list").classList.remove("active"))
+    // document.querySelector("body").classList.remove("lock")
+});
 // SWICH THEME
 
 const toggleThemeBtn = document.getElementById('theme-btn');
