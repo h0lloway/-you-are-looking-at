@@ -13,6 +13,7 @@ window.addEventListener('scroll', () => {
   if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
     // scroll down
     header.classList.add('hide');
+    header.setAttribute('style', 'animation: none;');
   }
   else if (scrollPosition() < lastScroll && containHide()) {
     // scroll up
@@ -65,13 +66,20 @@ $(document).ready(function () {
     $('body').toggleClass('lock');
   });
 });
+
 document.addEventListener("click", function (e) {
   let r = e.target
     , i = document.querySelector(".nav__burger");
   r.closest(".nav__burger") || (i.classList.remove("active"),
     document.querySelector(".nav__list").classList.remove("active"))
-    // document.querySelector("body").classList.remove("lock")
+  document.querySelector("body").classList.remove("lock")
+  // document.addEventListener('click', () => {
+  //   this.body.classList.remove('lock');
+  // });
 });
+
+
+
 // SWICH THEME
 
 const toggleThemeBtn = document.getElementById('theme-btn');
@@ -119,31 +127,40 @@ showMore.addEventListener('click', () => {
   }
 });
 
-
-
-jQuery(document).ready(function () {
-  var btn = $('#up-arrow');
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-      btn.addClass('show');
-    } else {
-      btn.removeClass('show');
-    }
-  });
-  btn.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, '300');
-  });
-});
+// jQuery(document).ready(function () {
+//   var btn = $('#up-arrow');
+//   $(window).scroll(function () {
+//     if ($(window).scrollTop() > 300) {
+//       btn.addClass('show');
+//     } else {
+//       btn.removeClass('show');
+//     }
+//   });
+//   btn.on('click', function (e) {
+//     e.preventDefault();
+//     $('html, body').animate({ scrollTop: 0 }, '300');
+//   });
+// });
 
 // Приветствие по времени
 
-const hours = new Date().getHours();
-let message;
+const time = new Date().getHours();
+let greet;
 
-if (hours >= 0 && hours < 6) message = 'Доброй ночи!'
-if (hours >= 6 && hours < 12) message = 'Доброе утро!'
-if (hours >= 12 && hours < 18) message = 'Добрый день!'
-if (hours >= 18 && hours < 0) message = 'Добрый вечер!'
+if (time >= 0 && time < 6) {
+  greet = 'Доброй ночи!';
+}
 
-hi.innerText = message;
+else if (time >= 6 && time < 12) {
+  greet = 'Доброе утро!';
+}
+
+else if (time >= 12 && time < 17) {
+  greet = 'Добрый день!';
+}
+
+else if (time >= 17 && time <= 23) {
+  greet = 'Добрый вечер!';
+}
+
+hi.innerText = greet;
