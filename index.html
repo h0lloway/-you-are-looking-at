@@ -192,10 +192,10 @@
 
     <section class="skills" id="skills">
       <div class="container skills__container">
-        <h2 class="skills__title title">
+        <h2 class="skills__title title element-animation">
           Навыки
         </h2>
-        <ul class="skills__list list-reset skill">
+        <ul class="skills__list list-reset skill element-animation">
 
           <!-- html -->
           <li class="skill__item">
@@ -352,9 +352,9 @@
     <section class="about" id="about">
       <div class="container about__container animation">
         <div class="about__content">
-          <h2 class="about__title title">Обо мне</h2>
+          <h2 class="about__title title element-animation">Обо мне</h2>
 
-          <ul class="about__qualities list-reset qualities">
+          <ul class="about__qualities list-reset qualities element-animation">
 
             <li class="qualities__item">
               <div class="qualities__wrap">
@@ -432,13 +432,42 @@
 
     <section class="portfolio" id="portfolio">
       <div class="container portfolio__container animation">
-        <h2 class="portfolio__title title">
+        <h2 class="portfolio__title title element-animation">
           Портфолио
         </h2>
 
-        <ul class="portfolio__list list-reset">
+        <ul class="protfolio__list-filter list-filter list-reset element-animation">
+          <li class="list-filter__item" data-id="all">Все</li>
+          <li class="list-filter__item active" data-id="html">Верстка</li>
+          <li class="list-filter__item" data-id="email">Письма</li>
+          <li class="list-filter__item" data-id="vue">Vue</li>
+          <li class="list-filter__item" data-id="js">JavaScript</li>
+        </ul>
 
-          <li class="portfolio__list-item item-portf">
+        <ul class="portfolio__list list-reset ">
+
+          <li class="portfolio__list-item item-portf element-animation html">
+            <div class="item-portf__body">
+              <div class="item-portf__img">
+                <img src="img/enver_studio.webp" alt="Скриншот работы">
+              </div>
+              <div class="item-portf__content">
+                <h3 class="item-portf__title">
+                  Landing page
+                  <br><span><br></span>
+                </h3>
+                <ul class="item-portf__list list-reset">
+                  <li class="item-portf__list-item">Работа: Верстка</li>
+                  <li class="item-portf__list-item">HTML + CSS</li>
+                  <li class="item-portf__list-item">Функционал: Слайдер</li>
+                </ul>
+                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/enver_studio/" target="_blank">На
+                  сайт</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="portfolio__list-item item-portf element-animation vue">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/form-vue2.png" alt="Скриншот работы">
@@ -459,7 +488,7 @@
             </div>
           </li>
 
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation vue">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/portfolio1.png" alt="Скриншот работы">
@@ -481,7 +510,7 @@
           </li>
 
           <!-- 6 -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/SDP.webp" alt="Скриншот работы">
@@ -504,7 +533,7 @@
           </li>
 
           <!-- 8 -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/blanchard.webp" alt="Скриншот работы">
@@ -526,7 +555,7 @@
             </div>
           </li>
 
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/lorem-skrin.webp" alt="Скриншот работы">
@@ -547,7 +576,7 @@
             </div>
           </li>
 
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/ЭПА.webp" alt="Скриншот работы">
@@ -568,7 +597,7 @@
           </li>
 
           <!-- 2 -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/psycho.webp" alt="Скриншот работы">
@@ -590,9 +619,7 @@
             </div>
           </li>
 
-
-
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation email">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/hilding-letter.webp" alt="Скриншот работы">
@@ -614,7 +641,7 @@
           </li>
 
           <!-- 5 -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/gamevendor.webp" alt="Скриншот работы">
@@ -636,7 +663,7 @@
           </li>
 
           <!-- 3 -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/tectum.webp" alt="Скриншот работы">
@@ -658,7 +685,7 @@
             </div>
           </li>
 
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation email">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/rosseti-letter.webp" alt="Скриншот работы">
@@ -680,7 +707,7 @@
           </li>
 
           <!-- 4 -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/for-teachers.webp" alt="Скриншот работы">
@@ -701,32 +728,8 @@
             </div>
           </li>
 
-          <!-- 7 -->
-          <!-- <li class="portfolio__list-item item-portf">
-            <div class="item-portf__body">
-              <div class="item-portf__img">
-                <img src="img/my-portfolio(dark).webp" alt="Скриншот работы">
-              </div>
-              <div class="item-portf__content">
-                <h3 class="item-portf__title">
-                  Сайт-визитка
-                  <br><span>Моё портфолио</span>
-                </h3>
-                <ul class="item-portf__list list-reset">
-                  <li class="item-portf__list-item">Работа: Адаптивная верстка</li>
-                  <li class="item-portf__list-item">HTML + CSS(flex)</li>
-                  <li class="item-portf__list-item">Функционал: Выбор темы</li>
-                </ul>
-                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/my-portfolio/" target="_blank">На
-                  сайт</a>
-              </div>
-            </div>
-          </li> -->
-
-
-
           <!-- 9 -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/highpass.webp" alt="Скриншот работы">
@@ -749,8 +752,7 @@
           </li>
 
           <!-- 10 -->
-          <!-- class ="hidden" - старый вариант  -->
-          <li class="portfolio__list-item item-portf">
+          <!-- <li class="portfolio__list-item item-portf html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/skillbox.webp" alt="Скриншот работы">
@@ -769,11 +771,10 @@
                   сайт</a>
               </div>
             </div>
-          </li>
+          </li> -->
 
           <!-- 11 -->
-          <!-- class ="hidden" - старый вариант  -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/furino.webp" alt="Скриншот работы">
@@ -796,8 +797,7 @@
           </li>
 
           <!-- 12 -->
-          <!-- class ="hidden" - старый вариант  -->
-          <li class="portfolio__list-item item-portf">
+          <!-- <li class="portfolio__list-item item-portf html">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/evklid.webp" alt="Скриншот работы">
@@ -815,11 +815,10 @@
                 <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/evklid/" target="_blank">На сайт</a>
               </div>
             </div>
-          </li>
+          </li> -->
 
           <!-- 13 -->
-          <!-- class ="hidden" - старый вариант  -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation email">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/eldorado.webp" alt="Скриншот работы">
@@ -841,8 +840,7 @@
           </li>
 
           <!-- 14 -->
-          <!-- class ="hidden" - старый вариант  -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation email">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/htmlletter.webp" alt="Скриншот работы">
@@ -864,8 +862,7 @@
           </li>
 
           <!-- 15 -->
-          <!-- class ="hidden" - старый вариант  -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation email">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/blanchard-letter.webp" alt="Скриншот работы">
@@ -887,8 +884,7 @@
           </li>
 
           <!-- 16 -->
-          <!-- class ="hidden" - старый вариант  -->
-          <li class="portfolio__list-item item-portf">
+          <li class="portfolio__list-item item-portf element-animation js">
             <div class="item-portf__body">
               <div class="item-portf__img">
                 <img src="img/Игра пары числе.webp" alt="Скриншот работы">
@@ -903,45 +899,22 @@
                   <li class="item-portf__list-item"></li>
                   <li class="item-portf__list-item">Функционал: Игра</li>
                 </ul>
-                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/js-game-couples/"
+                <a class="item-portf__btn red-btn" href="https://h0lloway.github.io/couple_game/"
                   target="_blank">Смотреть</a>
               </div>
             </div>
           </li>
 
-          <!-- 1 -->
-          <!-- <li class="portfolio__list-item item-portf">
-						<div class="item-portf__body">
-							<div class="item-portf__img">
-								<img src="img/speaky_school.webp" alt="Скриншот работы">
-							</div>
-							<div class="item-portf__content">
-								<h3 class="item-portf__title">
-									Landing page
-									<br><span>Школа ин. языков</span>
-								</h3>
-								<ul class="item-portf__list list-reset">
-									<li class="item-portf__list-item">Работа: <b>Готов только десктоп</b></li>
-									<li class="item-portf__list-item">HTML + CSS(flex + grid)</li>
-									<li class="item-portf__list-item">Функционал: Табы, бургер меню, модальные окна</li>
-								</ul>
-								<a class="item-portf__btn red-btn" href="https://h0lloway.github.io/speaky_school/" target="_blank">На
-									сайт</a>
-							</div>
-						</div>
-					</li> -->
-
         </ul>
 
-        <button class="portfolio__btn my-btn red-btn more-item-btn">Показать ещё</button>
-        <!-- <button class="portfolio__btn my-btn red-btn close-item-btn hidden">Скрыть</button> -->
+        <!-- <button class="portfolio__btn my-btn red-btn more-item-btn">Показать ещё</button> -->
       </div>
     </section>
 
     <section class="contacts" id="contacts">
       <div class="container contacts__container animation">
-        <h2 class="contacts__title title">Связь со мной</h2>
-        <div class="contacts__content">
+        <h2 class="contacts__title title element-animation">Связь со мной</h2>
+        <div class="contacts__content element-animation">
           <div class="contacts__content-left content-left contacts-content">
 
             <h3 class="contacts-content__title">

@@ -108,24 +108,7 @@ if (localStorage.theme === 'dark') setDarkTheme()
 
 
 
-// работы в портфолио
 
-const showMore = document.querySelector('.more-item-btn');
-const productsLength = document.querySelectorAll('.item-portf').length;
-let items = 6;
-
-showMore.addEventListener('click', () => {
-  items += 3
-  const array = Array.from(document.querySelector('.portfolio__list').children);
-  const visItems = array.slice(0, items);
-
-  visItems.forEach(el => el.classList.add('is-visible'));
-
-
-  if (visItems.length === productsLength) {
-    showMore.style.display = 'none';
-  }
-});
 
 // jQuery(document).ready(function () {
 //   var btn = $('#up-arrow');
@@ -164,3 +147,94 @@ else if (time >= 17 && time <= 23) {
 }
 
 hi.innerText = greet;
+
+
+
+// фильтр для портфолио
+
+const listFilter = document.querySelector('.list-filter');
+items = document.querySelectorAll('.item-portf')
+listItems = document.querySelectorAll('.list-filter__item')
+
+
+function filter() {
+  listFilter.addEventListener('click', event => {
+    const targetId = event.target.dataset.id
+    const target = event.target
+
+    if (target.classList.contains('list-filter__item')) {
+      listItems.forEach(listItem => listItem.classList.remove('active'))
+      target.classList.add('active')
+    }
+
+
+    switch (targetId) {
+      case 'all':
+        getItems('portfolio__list-item')
+        break
+      case 'html':
+        getItems(targetId)
+        break
+      case 'email':
+        getItems(targetId)
+        break
+      case 'vue':
+        getItems(targetId)
+        break
+      case 'js':
+        getItems(targetId)
+        break
+    }
+  })
+}
+
+filter()
+
+function getItems(className) {
+  items.forEach(item => {
+    if (item.classList.contains(className)) {
+      item.style.display = 'block'
+    } else {
+      item.style.display = 'none'
+    }
+  })
+}
+
+// работы в портфолио
+
+// const showMore = document.querySelector('.more-item-btn');
+// const productsLength = document.querySelectorAll('.item-portf').length;
+// let items = 6;
+
+// showMore.addEventListener('click', () => {
+//   items += 3
+//   const array = Array.from(document.querySelector('.portfolio__list').children);
+//   const visItems = array.slice(0, items);
+
+//   visItems.forEach(el => el.classList.add('is-visible'));
+
+
+//   if (visItems.length === productsLength) {
+//     showMore.style.display = 'none';
+//   }
+// });
+
+
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
