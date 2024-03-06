@@ -1,3 +1,61 @@
+// Приветствие по времени
+
+const time = new Date().getHours();
+let greet;
+
+if (time >= 0 && time < 6) {
+  greet = 'Доброй ночи!';
+}
+
+else if (time >= 6 && time < 12) {
+  greet = 'Доброе утро!';
+}
+
+else if (time >= 12 && time < 17) {
+  greet = 'Добрый день!';
+}
+
+else if (time >= 17 && time <= 23) {
+  greet = 'Добрый вечер!';
+}
+
+hi.innerText = greet;
+
+// BURGER
+
+const hamb = document.querySelector("#hamb");
+const menuWrap = document.querySelector("#menuwrap");
+const menu = document.querySelector("#menu").cloneNode(1);
+const body = document.body;
+
+hamb.addEventListener("click", hambHandler);
+
+function hambHandler(e) {
+  e.preventDefault();
+  menuWrap.classList.toggle("open");
+  hamb.classList.toggle("active");
+  body.classList.toggle("lock");
+  renderMenuWrap();
+}
+
+function renderMenuWrap() {
+  menuWrap.appendChild(menu);
+}
+
+// Код для закрытия меню при нажатии на ссылку
+
+const links = Array.from(menu.children);
+
+links.forEach((link) => {
+  link.addEventListener("click", closeOnClick);
+});
+
+function closeOnClick() {
+  menuWrap.classList.remove("open");
+  hamb.classList.remove("active");
+  body.classList.remove("lock");
+}
+
 // HEADER // HEADER // HEADER // HEADER // HEADER // HEADER 
 
 let lastScroll = 0;
@@ -58,25 +116,8 @@ anchors.forEach(function (item) {
   });
 });
 
-// BURGER
 
-$(document).ready(function () {
-  $('.nav__burger').click(function (event) {
-    $('.nav__burger,.nav__list').toggleClass('active');
-    $('body').toggleClass('lock');
-  });
-});
 
-document.addEventListener("click", function (e) {
-  let r = e.target
-    , i = document.querySelector(".nav__burger");
-  r.closest(".nav__burger") || (i.classList.remove("active"),
-    document.querySelector(".nav__list").classList.remove("active"))
-  document.querySelector("body").classList.remove("lock")
-  // document.addEventListener('click', () => {
-  //   this.body.classList.remove('lock');
-  // });
-});
 
 
 
@@ -106,47 +147,17 @@ toggleThemeBtn.addEventListener('click', () => {
 
 if (localStorage.theme === 'dark') setDarkTheme()
 
+// ====== // ====== // ====== // ====== // // ====== // ====== // 
 
+// const { matches: userPrefersDark } = window.matchMedia('(prefers-color-scheme: dark)');
 
+// const toggle = document.querySelector('.toggle-input');
+// toggle.checked = userPrefersDark;
 
-
-// jQuery(document).ready(function () {
-//   var btn = $('#up-arrow');
-//   $(window).scroll(function () {
-//     if ($(window).scrollTop() > 300) {
-//       btn.addClass('show');
-//     } else {
-//       btn.removeClass('show');
-//     }
-//   });
-//   btn.on('click', function (e) {
-//     e.preventDefault();
-//     $('html, body').animate({ scrollTop: 0 }, '300');
-//   });
+// toggle.addEventListener('change', (e) => {
+//   const theme = e.target.checked ? 'dark' : 'light';
+//   document.documentElement.dataset.theme = theme;
 // });
-
-// Приветствие по времени
-
-const time = new Date().getHours();
-let greet;
-
-if (time >= 0 && time < 6) {
-  greet = 'Доброй ночи!';
-}
-
-else if (time >= 6 && time < 12) {
-  greet = 'Доброе утро!';
-}
-
-else if (time >= 12 && time < 17) {
-  greet = 'Добрый день!';
-}
-
-else if (time >= 17 && time <= 23) {
-  greet = 'Добрый вечер!';
-}
-
-hi.innerText = greet;
 
 
 
@@ -220,6 +231,7 @@ function getItems(className) {
 // });
 
 
+// animation
 
 function onEntry(entry) {
   entry.forEach(change => {
@@ -238,3 +250,21 @@ let elements = document.querySelectorAll('.element-animation');
 for (let elm of elements) {
   observer.observe(elm);
 }
+
+// (function () {
+//   var elementShow = document.querySelectorAll('.element-show');
+
+//   var observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+//         return;
+//       }
+
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add('element-animation');
+//       }
+//     });
+//   });
+
+//   observer.observe(elementShow);
+// })();

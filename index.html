@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dubrovin Maksim</title>
-  <link rel="icon" href="img/favicon.png">
+  <link rel="icon" href="img/favicon2.png">
 
   <!-- fonts -->
   <!-- fonts -->
@@ -18,40 +18,14 @@
   <!-- styles -->
   <!-- styles -->
 
-  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /> -->
-  <!-- choices -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" /> -->
-
-  <!-- tooltips -->
-  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
-
   <!-- my-styles -->
   <link rel="stylesheet" href="css/main.min.css">
 
   <!-- JavaScript -->
   <!-- JavaScript -->
 
-  <!-- accordion -->
-  <!-- <script defer src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-  <!-- <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-
-  <!-- choices -->
-  <!-- <script defer src="js/choices.min.js"></script> -->
-  <!-- swiper -->
-  <!-- <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
-
-  <!-- GSAP -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-
-  <!-- tooltips -->
-  <!-- <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script> -->
-  <!-- <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script> -->
-
-  <!-- jQuery -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- my JS -->
-  <!-- <script defer src="js/header.js"></script> -->
+
   <script defer src="js/main.js"></script>
 </head>
 
@@ -60,9 +34,6 @@
     <div class="container header__container">
       <div class="header__content">
         <a class="header__logo" href="#">
-          <!-- <img src="img/memoji-.png" alt="" width="50">
-          <span>Dubrovin <br> Maksim</span> -->
-
           <svg class="svg-logo" viewbox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M24.3 0.5H95.7C100.051 0.5 103.282 0.500415 105.839 0.716169C108.39 0.931405 110.223 1.35826 111.785 2.1854C114.354 3.5455 116.454 5.64623 117.815 8.21502C118.642 9.7772 119.069 11.6103 119.284 14.1609C119.5 16.7176 119.5 19.9495 119.5 24.3V95.7C119.5 100.051 119.5 103.282 119.284 105.839C119.069 108.39 118.642 110.223 117.815 111.785C116.454 114.354 114.354 116.454 111.785 117.815C110.223 118.642 108.39 119.069 105.839 119.284C103.282 119.5 100.051 119.5 95.7 119.5H24.3C19.9495 119.5 16.7176 119.5 14.1609 119.284C11.6103 119.069 9.7772 118.642 8.21502 117.815C5.64623 116.454 3.5455 114.354 2.1854 111.785C1.35826 110.223 0.931405 108.39 0.716169 105.839C0.500415 103.282 0.5 100.051 0.5 95.7V24.3C0.5 19.9495 0.500415 16.7176 0.716169 14.1609C0.931405 11.6103 1.35826 9.7772 2.1854 8.21502C3.5455 5.64623 5.64623 3.5455 8.21502 2.1854C9.7772 1.35826 11.6103 0.931405 14.1609 0.716169C16.7176 0.500415 19.9495 0.5 24.3 0.5Z"
@@ -80,15 +51,14 @@
               d="M19.3086 52.3555H29.3281L44.1641 96.0195L58.8945 52.3555H68.8086V104H62.1641V73.5195C62.1641 72.4648 62.1875 70.7188 62.2344 68.2812C62.2812 65.8438 62.3047 63.2305 62.3047 60.4414L47.5742 104H40.6484L25.8125 60.4414V62.0234C25.8125 63.2891 25.8359 65.2227 25.8828 67.8242C25.9531 70.4023 25.9883 72.3008 25.9883 73.5195V104H19.3086V52.3555Z"
               fill="white" />
           </svg>
-
-
         </a>
+
         <div class="header__right-content">
-          <div class="header__nav nav">
-            <button class="nav__burger my-btn" aria-label="Открытие меню">
+          <nav class="header__nav nav">
+            <button class="nav__burger my-btn" id="hamb" aria-label="Открытие меню">
               <span></span>
             </button>
-            <ul class="nav__list list-reset">
+            <ul class="nav__list list-reset" id="menu">
               <li class="nav__list-item">
                 <a class="nav__list-item-link" href="#skills">Навыки</a>
               </li>
@@ -110,14 +80,23 @@
                 </a>
               </li>
             </ul>
-          </div>
+            <div class="nav__menu-wrap" id="menuwrap"></div>
+          </nav>
 
           <div class="header__theme">
             <button class="header__btn my-btn swich-theme-btn swich-theme-btn-dark" id="theme-btn" aria-label="Пометка">
               <img src="img/sun.png" alt="" width="30" height="30" id="theme-img">
             </button>
-            <!-- data-tippy-content="Не финальный вариант темной темы, она в процессе :)" js-tooltip -->
           </div>
+
+          <!-- <div class="toggle">
+            <input class="toggle-input" type="checkbox" />
+            <div class="toggle-bg"></div>
+            <div class="toggle-switch">
+              <div class="toggle-switch-figure"></div>
+              <div class="toggle-switch-figureAlt"></div>
+            </div>
+          </div> -->
 
         </div>
       </div>
@@ -157,11 +136,6 @@
             <br> <span class="hero-title__fifth"><strong>фронтенд разработчик</strong></span>
           </h1>
 
-          <!-- <p class="hero__descr">
-            Верстаю кроссбраузерно,
-            <br> валидно и адаптивно
-          </p> -->
-
           <a class="hero-title__sixth red-btn portf-btn" href="#portfolio"><span>Смотреть портфолио</span>
             <svg class="" focusable="false" viewbox="0 0 24 24" aria-hidden="true">
               <path
@@ -170,24 +144,12 @@
             </svg>
           </a>
 
-          <!-- <a href="##" class="hero-title__seventh red-btn cv-btn">
-            <span>Скачать CV</span>
-
-          </a> -->
-
-          <!-- <a class="button learn-more "  href="#portfolio"><span>Смотреть портфолио</span></a> -->
         </div>
 
         <div class="hero__img">
           <img src="img/me-squ.webp" width="350" height="370" alt="Фотография">
         </div>
       </div>
-
-      <a class="hero__downarrow" href="#skills">
-        <svg class="" width="50" height="50">
-          <use xlink:href="img/sprite.svg#downarrow"></use>
-        </svg>
-      </a>
     </section>
 
     <section class="skills" id="skills">
@@ -350,7 +312,7 @@
     </section>
 
     <section class="about" id="about">
-      <div class="container about__container animation">
+      <div class="container about__container">
         <div class="about__content">
           <h2 class="about__title title element-animation">Обо мне</h2>
 
@@ -431,7 +393,7 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-      <div class="container portfolio__container animation">
+      <div class="container portfolio__container">
         <h2 class="portfolio__title title element-animation">
           Портфолио
         </h2>
@@ -970,13 +932,13 @@
   </footer>
 
   <!-- Кнопка скролла вверх страницы -->
-  <a class="up-arrow" id="up-arrow">
+  <!-- <a class="up-arrow" id="up-arrow">
 
     <svg class="" width="60" height="60">
       <use xlink:href="img/sprite.svg#uparrow"></use>
     </svg>
 
-  </a>
+  </a> -->
 
 </body>
 
